@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f6;
+  color: #00003a;
+}
+
+h1 {
+  text-align: center;
+  margin: 1.5rem auto 1rem;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.loader-box {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  border: 4px solid #00003a;
+  border-radius: 0.5rem;
+  top: calc(50% - 2rem);
+  right: calc(50% - 2rem);
+  -webkit-animation: loader 1.5s infinite ease;
+  animation: loader 1.5s infinite ease;
+}
+
+.loader-inner {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  background-color: #00003a;
+  -webkit-animation: loader-inner 1.5s infinite ease-in;
+  animation: loader-inner 1.5s infinite ease-in;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.image-container {
+  margin: 1rem 30%;
+}
+
+.image-container .image-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.image-container .image-item:hover .hover-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.image-container .image-item .main-image {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 58, 0.3);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 58, 0.3);
+}
+
+.image-container .image-item .hover-information {
+  position: absolute;
+  width: 100%;
+  bottom: 4px;
+  left: 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.image-container .image-item .hover-information a {
+  text-decoration: none;
+}
+
+.image-container .image-item .hover-information .user-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.75rem;
+}
+
+.image-container .image-item .hover-information .user-information .user-information-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+}
+
+.image-container .image-item .hover-information .user-information .user-information-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-container .image-item .hover-information .user-information .user-information-text a {
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  color: #fff;
+}
+
+.image-container .image-item .hover-information .user-information .user-information-text a:first-of-type {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.image-container .image-item .hover-information .user-information .user-information-text a:last-of-type {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 350px;
+}
+
+.image-container .image-item .hover-information .user-information .user-information-text a:hover {
+  color: #acacac;
+}
+
+.image-container .image-item .hover-information .photo-information {
+  padding: 0.75rem;
+}
+
+.image-container .image-item .hover-information .photo-information a {
+  background: #f4f4f6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  margin-left: 0.75rem;
+  min-width: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00003a;
+  font-size: 0.75rem;
+}
+
+.image-container .image-item .hover-information .photo-information a i {
+  margin-left: 0.25rem;
+}
+
+@media (min-width: 767.99px) and (max-width: 1199.99px) {
+  .image-container {
+    margin: 1rem 10%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1599.99px) {
+  .image-container {
+    margin: 1rem 25%;
+  }
+  .image-container .user-information-text a:first-of-type {
+    max-width: 230px !important;
+  }
+  .image-container .user-information-text a:last-of-type {
+    max-width: 230px !important;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1900px) {
+  .image-container .user-information-text a:first-of-type {
+    max-width: 265px !important;
+  }
+  .image-container .user-information-text a:last-of-type {
+    max-width: 265px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0.75rem 1.5rem;
+  }
+  .image-container {
+    margin: 0.75rem;
+  }
+  .image-container .image-item .hover-information .user-information {
+    padding: 0.5rem;
+  }
+  .image-container .image-item .hover-information .user-information .user-information-image {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .image-container .image-item .hover-information .user-information .user-information-text a:first-of-type {
+    font-size: 0.875rem;
+    max-width: 200px;
+  }
+  .image-container .image-item .hover-information .user-information .user-information-text a:last-of-type {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+    max-width: 200px;
+  }
+  .image-container .image-item .hover-information .photo-information {
+    padding: 0.5rem;
+  }
+  .image-container .image-item .hover-information .photo-information a {
+    padding: 0.5rem 0.6rem;
+    margin-left: 0.35rem;
+    min-width: 2rem;
+    font-size: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .user-information-text a:first-of-type {
+    font-size: 0.75rem !important;
+    max-width: 80px !important;
+  }
+  .user-information-text a:last-of-type {
+    max-width: 80px !important;
+  }
+}
